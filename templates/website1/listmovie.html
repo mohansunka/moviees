@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%load static %}
+<html>
+<head>
+{#<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/.........>#}
+{#<link rel="stylesheet" href="{% static "css/style.css"%}">#}
+<style>
+    .container
+{
+margin-top:100px;
+}
+body
+{
+    background-image: url("{% static "img/bg.jpg" %}");
+    background-repeat:no-repeat;
+    background-size:cover;
+    {#background-color: blue;#}
+}
+</style>
+</head>
+
+<body>
+<h1 align="center">Movies Information</h1>
+{% if movies_list %}
+<table border="1" align="center" bgcolor="cyan" bordercolor="blue">
+	<thead>
+	<th>Released Date</th>
+	<th>Movie Name</th>
+	<th>Hero</th>
+	<th>Heroine</th>
+	<th>Rating</th>
+	</thead>
+        {% for movie in movies_list %}
+         <tr>
+         	<td>{{movie.rdate}}</td>
+         	<td>{{movie.moviename}}</td>
+         	<td>{{movie.hero}}</td>
+         	<td>{{movie.heroine}}</td>
+         	<td>{{movie.rating}}</td>
+         </tr>
+        {% endfor %}
+         </table>
+ 	{% else %}
+ 	<p>Records not found</p>
+	{% endif %}
+	</body>
+</html>

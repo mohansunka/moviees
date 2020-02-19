@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%load static %}
+<head>
+{#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/.......>#}
+{#<link rel="stylesheet" href="{% static "css/style.css"%}">#}
+    <style>
+    .container
+{
+margin-top:100px;
+}
+body
+{
+    background-image: url("{% static "img/bg.jpg" %}");
+background-repeat:no-repeat;
+background-size:cover;
+    {#background-color: blue;#}
+}
+</style>
+</head>
+<body>
+<div class="container" align="center">
+<div class="jumbotron">
+<h1>Movies List</h1>
+<a class="btn btn-primary btn-lg"  href="/addmovie">Add Movie</a>
+<a class="btn btn-primary btn-lg"  href="/listmovies">List Movies</a>
+</div>
+</div>
+</body>
+</html>
